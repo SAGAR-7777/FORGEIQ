@@ -7,9 +7,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
-from config import APP_NAME, PORT, HOST, BASE_DIR
-from routers.api_router import router as api_router
-from simulator import simulator
+from backend.config import APP_NAME, PORT, HOST, BASE_DIR
+from backend.routers.api_router import router as api_router
+from backend.simulator import simulator
 
 
 # Background task for live periodic sensor telemetry updates
