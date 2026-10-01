@@ -43,7 +43,7 @@ export const DefectIntelligencePage: React.FC = () => {
               </span>
             </div>
             <p className="text-xs text-slate-400 mt-1 max-w-2xl">
-              RandomForest ensemble predictive model forecasting micro-fractures, dimensional tolerance breaches, surface chatter, and assembly mismatches before parts are finished.
+              Multi-factor surrogate model (sigmoid-weighted linear formula) estimating defect risk from sensor deviations. Not a trained ML classifier — outputs are demo approximations.
             </p>
           </div>
 
@@ -87,12 +87,12 @@ export const DefectIntelligencePage: React.FC = () => {
         </div>
 
         <div className="p-4 bg-graphite-900 border border-graphite-800 rounded-2xl shadow-xl">
-          <span className="text-[10px] font-mono text-slate-400 block mb-1">MODEL CONFIDENCE</span>
+          <span className="text-[10px] font-mono text-slate-400 block mb-1">HEURISTIC CONFIDENCE</span>
           <div className="text-3xl font-extrabold font-mono text-forge-cyan">
             {primaryDefect.confidence_pct}
           </div>
-          <span className="text-[10px] text-forge-cyan/80 font-mono mt-1 block">
-            Trained on 10,000 cycles
+          <span className="text-[10px] text-amber-400/80 font-mono mt-1 block">
+            Fixed heuristic — not validated
           </span>
         </div>
       </div>
@@ -106,7 +106,7 @@ export const DefectIntelligencePage: React.FC = () => {
               <span className="text-[10px] font-mono text-forge-cyan uppercase font-bold tracking-tight">EXPLAINABLE AI (XAI)</span>
               <h3 className="text-sm font-bold text-white font-mono">TOP CONTRIBUTING PARAMETER FACTORS</h3>
             </div>
-            <span className="text-[10px] font-mono text-slate-400">SHAP FEATURE IMPORTANCE</span>
+            <span className="text-[10px] font-mono text-amber-400">SURROGATE CONTRIBUTION WEIGHTS</span>
           </div>
 
           <div className="space-y-4">

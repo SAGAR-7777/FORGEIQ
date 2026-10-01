@@ -73,11 +73,15 @@ class IndustrialDefectPredictor:
             "probability": probability,
             "probability_pct": f"{int(round(probability * 100))}%",
             "risk_level": risk_level,
+            # confidence is a fixed heuristic value, not empirically validated
             "confidence": 0.91 if risk_level in ["CRITICAL", "HIGH RISK"] else 0.88,
             "confidence_pct": "91%",
             "top_contributors": top_contributors,
             "predicted_scrap_rate": f"{scrap_pct}%",
-            "similar_incidents": ["INC-882 (Jan 14)", "INC-791 (Dec 03)", "INC-612 (Nov 19)"],
+            "similar_incidents": ["INC-882 (Demo)", "INC-791 (Demo)", "INC-612 (Demo)"],
+            "model_type": "multi-factor-sigmoid-surrogate",
+            "model_disclaimer": "Demo surrogate model using rule-based thresholds and sigmoid scoring. Not trained on real manufacturing data.",
+            "is_demo_data": True,
             "timestamp": datetime.now(timezone.utc).isoformat()
         }
 

@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-from pydantic import BaseModel
 from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -11,6 +10,11 @@ PORT = int(os.getenv("PORT", "8000"))
 HOST = os.getenv("HOST", "0.0.0.0")
 APP_NAME = os.getenv("APP_NAME", "FORGEIQ")
 ENVIRONMENT = os.getenv("ENVIRONMENT", "development")
+
+# CORS — comma-separated list of allowed origins, e.g. "http://localhost:5173,https://yourdomain.com"
+# Defaults to wildcard for local development; restrict in production.
+_cors_raw = os.getenv("CORS_ORIGINS", "*")
+CORS_ORIGINS = [o.strip() for o in _cors_raw.split(",") if o.strip()] if _cors_raw != "*" else ["*"]
 
 # Manufacturing Parameter Thresholds & Baselines
 MACHINE_PARAMETERS = {

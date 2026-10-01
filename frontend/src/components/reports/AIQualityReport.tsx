@@ -235,8 +235,8 @@ export const AIQualityReport: React.FC = () => {
         {/* Footer & Compliance Signature */}
         <div className="pt-6 border-t border-graphite-800 print:border-slate-300 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-slate-400 print:text-slate-600">
           <div>
-            <span>SYSTEM: FORGEIQ MULTI-AGENT SWARM v1.0.0</span>
-            <p className="text-[10px] mt-0.5">IBM Watsonx / Orchestrate Interoperable Architecture</p>
+            <span>SYSTEM: FORGEIQ MULTI-AGENT PIPELINE v1.0.0</span>
+            <p className="text-[10px] mt-0.5">Custom Python agent pipeline — Demo environment, simulated data</p>
           </div>
           <div className="mt-3 sm:mt-0 text-right">
             <span>OPERATOR SIGN-OFF: SAGAR (LEAD QC)</span>

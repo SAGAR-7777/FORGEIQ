@@ -50,6 +50,12 @@ export const Navbar: React.FC = () => {
             <span className="text-slate-300">STREAMING:</span>
             <span className="text-forge-cyan font-bold">12 MACHINES ONLINE</span>
           </div>
+
+          {/* Demo Environment Label */}
+          <div className="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-500/10 border border-amber-500/30 text-[10px] font-mono text-amber-400 font-bold">
+            <span>⚠</span>
+            <span>DEMO ENVIRONMENT — SIMULATED DATA</span>
+          </div>
         </div>
 
         {/* Right: Forge Quality Index, Agent Consensus, Controls */}
@@ -286,7 +292,7 @@ export const Navbar: React.FC = () => {
                 { label: 'AI Root-Cause Graph', view: 'root_cause' },
                 { label: 'Knowledge Center (RAG)', view: 'knowledge' },
                 { label: 'Incident Replay (10:31 - 10:41)', view: 'replay' },
-                { label: 'System Architecture (IBM / watsonx)', view: 'architecture' },
+                { label: 'System Architecture', view: 'architecture' },
               ].map((item) => (
                 <button
                   key={item.view}

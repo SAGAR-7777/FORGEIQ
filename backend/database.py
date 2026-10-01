@@ -293,7 +293,7 @@ class Database:
                 "confidence": 0.91,
                 "processing_time": "114ms",
                 "last_action": "Passed defect risk matrix to Process Optimization Agent.",
-                "reasoning_summary": "RandomForest ensemble identified top 3 contributors: Spindle thermal rise (31%), Pressure fluctuation (24%), and Spindle vibration (18%)."
+                "reasoning_summary": "Surrogate defect model (multi-factor sigmoid) identified top 3 contributors: Spindle thermal rise (31%), Pressure fluctuation (24%), and Spindle vibration (18%)."
             },
             {
                 "agent": "Process Optimization Agent",

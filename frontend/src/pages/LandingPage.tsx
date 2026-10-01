@@ -13,57 +13,57 @@ export const LandingPage: React.FC = () => {
     {
       num: '01',
       title: 'THE MANUFACTURING PROBLEM',
-      desc: 'Traditional manufacturing discovers defects too late—at the end-of-line CMM or worse, after customer delivery. Reactive scrap costs American and European manufacturers over $420B annually in rework, downtime, and warranty recalls.'
+      desc: 'Traditional manufacturing discovers defects too late—at the end-of-line CMM or worse, after customer delivery. ForgeIQ demonstrates an AI-driven architecture for proactive defect prevention — catching quality risks during production, not after.'
     },
     {
       num: '02',
-      title: 'AI QUALITY INTELLIGENCE',
-      desc: 'ForgeIQ replaces post-mortem inspection with proactive cyber-physical surveillance. By streaming 12 real-time parameters per machine, the system anticipates quality drift before metal begins to deform.'
+      title: 'AI QUALITY INTELLIGENCE (DEMO)',
+      desc: 'ForgeIQ simulates proactive quality surveillance across 12 demo machines × 12 sensor channels using a stochastic Python simulation engine. All telemetry is simulated demo data — not connected to real industrial hardware.'
     },
     {
       num: '03',
-      title: 'FOUR-AGENT AUTONOMOUS SWARM',
-      desc: 'Orchestrates four specialized autonomous agents: Process Monitoring Agent (sensory perception), Quality Analysis Agent (SPC capability), Defect Prediction Agent (failure probability), and Process Optimization Agent (recipe synthesis).'
+      title: 'FOUR-AGENT PIPELINE',
+      desc: 'Orchestrates four Python agent classes in a sequential pipeline: Process Monitoring Agent (threshold anomaly detection), Quality Analysis Agent (heuristic Cpk), Defect Prediction Agent (surrogate math model), and Process Optimization Agent (keyword-RAG grounded recommendations).'
     },
     {
       num: '04',
-      title: 'DIGITAL FACTORY TWIN',
-      desc: 'A live interactive topological twin of the entire plant floor. Visualizes raw material flow through stamping presses, 5-axis CNC machining centers, robotic welding, and coordinate metrology cells.'
+      title: 'DIGITAL FACTORY TWIN (SIMULATED)',
+      desc: 'An interactive demo visualization of a simulated factory floor. Displays 12 demo machines across 4 production lines with real-time telemetry charts driven by in-process Python simulation.'
     },
     {
       num: '05',
-      title: 'PREDICTIVE QUALITY & SCRAP CONTAINMENT',
-      desc: 'Ensemble ML classification algorithms calculate defect probabilities (e.g. 82% Dimensional Inaccuracy) up to 40 minutes ahead of part completion, providing ample time for corrective intervention.'
+      title: 'SURROGATE DEFECT PREDICTION',
+      desc: 'A multi-factor sigmoid surrogate model estimates defect probability from normalized sensor deviations (temperature, vibration, pressure, RPM). Not a trained ML classifier — outputs are demo approximations based on fixed heuristic coefficients.'
     },
     {
       num: '06',
-      title: 'ROOT CAUSE INTELLIGENCE (CAUSAL DAG)',
-      desc: 'Every predicted failure is back-propagated through a deterministic causal graph, linking dimensional tolerances to spindle thermal expansion, bearing harmonic frequencies, and batch metallurgy hardness variations.'
+      title: 'ROOT CAUSE VISUALIZATION',
+      desc: 'Predicted failures are mapped through a 5-node causal workflow, linking sensor anomalies to failure modes and recommended interventions. Static causal chain for demo visualization purposes.'
     },
     {
       num: '07',
-      title: 'WHAT-IF PRODUCTION SIMULATOR',
-      desc: 'Allows engineers to virtually test spindle speed cutbacks, feed rate throttling, and coolant boosts against a physics-informed surrogate model to view projected quality gains before touching a machine PLC.'
+      title: 'WHAT-IF PARAMETER SIMULATOR',
+      desc: 'Allows engineers to virtually test spindle speed cutbacks, feed rate throttling, and coolant adjustments. Outputs are parametric math estimates — not a physics simulation or trained surrogate model.'
     },
     {
       num: '08',
-      title: 'GROUNDED RAG KNOWLEDGE CORPUS',
-      desc: 'Semantic vector retrieval over Haas CNC SOPs, Trumpf Laser standards, ISO 9001:2015, ISO 10816-3 vibration severity charts, and historical failure analysis incident reports.'
+      title: 'KEYWORD-BASED KNOWLEDGE RETRIEVAL',
+      desc: 'Token/keyword overlap matching against 5 demo-authored knowledge documents representing ISO 9001, ISO 10816-3, Haas SOP-704, DIN EN 10083, and a fictional incident report. Not semantic vector search.'
     },
     {
       num: '09',
       title: 'HUMAN-IN-THE-LOOP GOVERNANCE',
-      desc: 'Strict industrial safety protocol: AI recipes are staged in an approval queue. Certified engineers inspect expected impacts, modify setpoints if necessary, and authorize writes with an immutable audit stamp.'
+      desc: 'AI-generated process recommendations are staged in an approval queue. The operator must Approve, Reject, or Modify each recommendation. In this demo, approval updates in-memory simulation state only.'
     },
     {
       num: '10',
-      title: 'TECHNOLOGY ARCHITECTURE',
-      desc: 'Built on a modular, enterprise-grade architecture: FastAPI Python backend, scikit-learn ML engine, vector embeddings index, IBM Langflow & Orchestrate interoperability, and React TypeScript frontend.'
+      title: 'TECHNOLOGY STACK',
+      desc: 'Python 3.12 + FastAPI backend, React 18 + TypeScript frontend, Groq LLaMA-3.3-70B for Copilot (optional, with deterministic fallback). Custom Python agent pipeline — not IBM Langflow or IBM Orchestrate.'
     },
     {
       num: '11',
-      title: 'ENTERPRISE PRODUCTION DEPLOYMENT',
-      desc: 'Ready for OPC-UA and MQTT edge deployment in aerospace, automotive, precision robotics, and heavy industrial stamping operations.'
+      title: 'EXTENSIBLE ARCHITECTURE',
+      desc: 'Designed to demonstrate a path toward real OPC-UA / MQTT edge integration, trained ML classifiers (RandomForest, IsolationForest), semantic vector RAG, and persistent time-series databases in future iterations.'
     }
   ];
 

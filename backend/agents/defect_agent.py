@@ -22,7 +22,7 @@ class DefectPredictionAgent:
 
         if risk_level in ["CRITICAL", "HIGH RISK"]:
             output_msg = f"Elevated defect risk flagged on {machine_name}: {defect_type} predicted with {prediction['probability_pct']} likelihood. Risk Level: {risk_level}. Projected scrap rate: {prediction['predicted_scrap_rate']}."
-            reasoning = f"RandomForest classification model computed {prediction['confidence_pct']} confidence. Primary drivers: {prediction['top_contributors'][0]['name']} ({prediction['top_contributors'][0]['impact']}) and {prediction['top_contributors'][1]['name']} ({prediction['top_contributors'][1]['impact']})."
+            reasoning = f"Surrogate defect model (multi-factor sigmoid) computed {prediction['confidence_pct']} confidence. Primary drivers: {prediction['top_contributors'][0]['name']} ({prediction['top_contributors'][0]['impact']}) and {prediction['top_contributors'][1]['name']} ({prediction['top_contributors'][1]['impact']})."
             status = "defect_risk_detected"
         elif risk_level == "EARLY WARNING":
             output_msg = f"Early defect warning on {machine_name}: Potential {defect_type} ({prediction['probability_pct']} prob). Trend indicates upward quality risk."

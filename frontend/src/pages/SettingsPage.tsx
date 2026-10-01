@@ -125,17 +125,17 @@ export const SettingsPage: React.FC = () => {
             </div>
 
             <div className="p-3 bg-graphite-850 rounded-xl border border-graphite-750">
-              <span className="text-[10px] text-slate-400 block mb-1">IBM WATSONX / ORCHESTRATE INTEGRATION:</span>
+              <span className="text-[10px] text-slate-400 block mb-1">MULTI-AGENT ORCHESTRATION:</span>
               <div className="text-white font-bold flex items-center justify-between">
-                <span>Compatible Langflow &amp; Orchestrate JSON Schema</span>
-                <span className="text-[10px] px-2 py-0.5 rounded bg-forge-cyan/20 text-forge-cyan">STANDBY</span>
+                <span>Custom Python Pipeline (4 Agent Classes)</span>
+                <span className="text-[10px] px-2 py-0.5 rounded bg-forge-cyan/20 text-forge-cyan">ACTIVE</span>
               </div>
             </div>
 
             <div className="p-3 bg-graphite-850 rounded-xl border border-graphite-750">
               <span className="text-[10px] text-slate-400 block mb-1">HUMAN-IN-THE-LOOP SAFETY POLICY:</span>
               <p className="text-[11px] text-slate-300 font-sans leading-relaxed">
-                Mandatory operator authorization protocol is actively enforced. Machine controllers reject autonomous setpoint writes without cryptographically authenticated operator approval.
+                Operator authorization required before any recommendation is applied. In this demo, approval updates in-memory simulation state only — no real machine connections.
               </p>
             </div>
 

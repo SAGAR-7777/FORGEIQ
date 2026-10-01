@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
-from backend.config import APP_NAME, PORT, HOST, BASE_DIR
+from backend.config import APP_NAME, PORT, HOST, BASE_DIR, CORS_ORIGINS
 from backend.routers.api_router import router as api_router
 from backend.simulator import simulator
 
@@ -31,21 +31,26 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title=APP_NAME,
-    description="ForgeIQ - AI Manufacturing Quality Intelligence API",
+    description="ForgeIQ - AI Manufacturing Quality Intelligence API (Demo Environment)",
     version="1.0.0",
     lifespan=lifespan
 )
 
-# Enable CORS for frontend Vite dev server and external clients
+# CORS — configurable via CORS_ORIGINS environment variable
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=CORS_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Register API Router first
+# Health check endpoint
+@app.get("/health", tags=["health"])
+def health_check():
+    return {"status": "ok", "app": APP_NAME, "environment": "demo"}
+
+# Register API Router
 app.include_router(api_router)
 
 # Mount Frontend Dist if built

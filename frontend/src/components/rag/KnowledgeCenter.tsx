@@ -53,7 +53,7 @@ export const KnowledgeCenter: React.FC = () => {
       setUploadOpen(false);
       setDocTitle('');
       setDocContent('');
-      showToast(`Document "${docTitle}" successfully ingested into RAG vector index.`);
+      showToast(`Document "${docTitle}" successfully ingested into knowledge base.`);
     } catch (err) {
       showToast('Upload failed.');
     }
@@ -68,11 +68,11 @@ export const KnowledgeCenter: React.FC = () => {
             <div className="flex items-center gap-2">
               <h2 className="text-xl font-bold text-white font-mono tracking-wide">RAG KNOWLEDGE CENTER</h2>
               <span className="text-[10px] font-mono uppercase bg-forge-cyan/20 text-forge-cyan px-2 py-0.5 rounded border border-forge-cyan/40">
-                VECTOR DATABASE RETRIEVAL
+                KEYWORD / TOKEN RETRIEVAL
               </span>
             </div>
             <p className="text-xs text-slate-400 mt-1 max-w-2xl leading-relaxed">
-              Grounds all multi-agent reasoning, root-cause derivations, and process optimizations in verified machine manuals, ISO/DIN manufacturing standards, and historical failure analysis reports.
+              Grounds multi-agent reasoning and process optimizations in demo knowledge documents. Retrieval uses token/keyword overlap matching — not semantic vector embeddings.
             </p>
           </div>
 
@@ -105,14 +105,14 @@ export const KnowledgeCenter: React.FC = () => {
             className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-forge-cyan to-forge-blue text-graphite-950 font-mono text-xs font-bold hover:brightness-110 transition flex items-center gap-1.5 disabled:opacity-50"
           >
             <Sparkles className="w-4 h-4" />
-            <span>{searching ? 'RETRIEVING...' : 'SEMANTIC SEARCH'}</span>
+            <span>{searching ? 'RETRIEVING...' : 'KEYWORD SEARCH'}</span>
           </button>
         </form>
 
         {/* Demo Data Notice */}
-        <div className="mt-3 text-[10px] font-mono text-slate-400 flex items-center gap-1.5">
-          <span className="w-1.5 h-1.5 rounded-full bg-forge-cyan" />
-          <span>Notice: Grounding corpus contains simulated industrial specifications (ISO 9001, ISO 10816-3, Haas SOP-704, DIN EN 10083).</span>
+        <div className="mt-3 text-[10px] font-mono text-amber-400/80 flex items-center gap-1.5 bg-amber-500/5 border border-amber-500/20 rounded-lg px-3 py-2">
+          <span>⚠</span>
+          <span>DEMO KNOWLEDGE BASE — All documents are demo-authored representations of standards. Not official ISO/DIN publications. Retrieval uses keyword/token overlap, not semantic embeddings.</span>
         </div>
       </div>
 
@@ -122,7 +122,7 @@ export const KnowledgeCenter: React.FC = () => {
           <div className="flex items-center justify-between pb-2 border-b border-graphite-800">
             <span className="text-xs font-bold font-mono text-forge-cyan flex items-center gap-2">
               <Sparkles className="w-4 h-4" />
-              SEMANTIC RETRIEVAL MATCHES ({searchResults.length} CHUNKS)
+              KEYWORD RETRIEVAL MATCHES ({searchResults.length} CHUNKS)
             </span>
             <button onClick={() => setSearchResults([])} className="text-slate-400 hover:text-white text-xs font-mono">
               Clear Results

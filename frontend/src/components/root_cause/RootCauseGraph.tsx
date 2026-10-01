@@ -31,14 +31,14 @@ export const RootCauseGraph: React.FC = () => {
       badge: 'PROBABILITY: 82%',
       badgeColor: 'bg-rose-500/20 text-rose-400 border-rose-500/40',
       summary: 'High risk of bore diameter exceeding aircraft turbine component drawing specification (+0.12 mm tolerance breach).',
-      evidence: 'Multiclass classification model (RandomForest) indicates 82% failure likelihood for Batch #09A.',
+      evidence: 'Surrogate defect model (multi-factor sigmoid) estimates 82% failure likelihood for Batch #09A (demo approximation).',
       sensorReadings: {
         'Predicted Deviation': '+0.14 mm',
         'Drawing Tolerance': '+/- 0.02 mm',
         'Scrap Risk': '18.4% projected'
       },
       historicalComparison: 'Matches Incident IR-2026-088 where 42 parts were scrapped due to thermal expansion.',
-      confidence: '91% (10,000 baseline cycles)',
+      confidence: '91% (fixed heuristic — not empirically validated)',
       relatedEvents: ['Anomaly ANO-2026-901', 'Anomaly ANO-2026-902', 'Scrap Risk Warning'],
       ragSources: [
         { title: 'Haas_CNC_Machining_Center_SOP_704.pdf', section: 'Section 4.3', relevance: '96%' }

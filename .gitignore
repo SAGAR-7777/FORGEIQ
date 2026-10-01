@@ -1,9 +1,32 @@
-# Backend
+# Python
 .venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.egg-info/
+build/
+.eggs/
+
+# Environment - NEVER commit secrets
 .env
+.env.local
+.env.*.local
 
 # Frontend
-node_modules/
-dist/
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
